@@ -18,4 +18,7 @@ def index():
     # The function renders a Jinja2 template that generates the home page using HTML and bootstrap CSS
     return render_template('index.html')
 
+@app.route("/<name>")
+def hello(name):
+    return f"Hello, {escape(name)} and welcome to my paralympics app!"
 
